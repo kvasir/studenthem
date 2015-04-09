@@ -5,3 +5,10 @@ env:
   - NODE_ENV=travis
 services:
   - mongodb
+notifications:
+  hipchat:
+    rooms:
+      secure: uO7CIAiaEN4Nn3v5Qf4yvX4vzzRWp0NN42ggnzSqaZlGrqO2dKL34fWW7o53gyoUZSHbIGAe+ms9y1gJkI+viT3NlYUwhcoUssviyxmFZg8FZ07RKWDVt12LN4/f65g4+R5MSyzbnbdOGsXJaFV3e4HuPYulXLHTm5rBw7WzeOs=
+    template:
+      - '%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message} (<a href="%{build_url}">Details</a>/<a href="%{compare_url}">Change view</a>)'
+    format: html
