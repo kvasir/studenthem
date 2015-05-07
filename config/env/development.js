@@ -3,7 +3,7 @@
 module.exports = {
 	db: 'mongodb://localhost/studenthem-dev',
 	app: {
-		title: 'studenthem - Development Environment'
+		title: 'Studenthem - Development Environment'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',
