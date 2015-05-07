@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		<h1>HEJ!</h1>
+		<form>
+			<input name="name" placeholder="Name, now." />
+			<button type="submit">CLICK!!!</button>
+		</form>
+		<p class="banan"></p>
+
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script>
+			$('form').submit(function () {
+				var data = {
+					name: $('input').val()
+				};
+				$.post('/users', data).success(function(data) {
+					$('.banan').text(data);
+				});
+				
+				return false;
+			});
+		</script>
+	</body>
+</html>
