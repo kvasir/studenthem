@@ -1,16 +1,17 @@
 <!doctype html>
 <html>
 	<head>
+		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
 	</head>
 	<body ng-app="myApp">
-		<h1>HEJsan!d</h1>
-		<div ng-controller="mainCtrl as vm">
+		<div class="container" ng-controller="mainCtrl as vm">
+			
+			<h1>{{vm.header}}</h1>
 			<input name="name" ng-model="userName" placeholder="Name, now." />
 			<button type="button" ng-click="vm.addUser(userName)">CLICK!!!</button>
 			<p ng-repeat="user in vm.users"> {{user.name}}</p>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="lib/angular/angular.min.js"></script>
 		<script src="mainCtrl.js"></script>
 	</body>
 </html>
