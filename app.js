@@ -4,6 +4,7 @@ var MongoClient = require('mongodb').MongoClient;
 var app = express();
 var mongoLikeForRealz;
 
+
 // Connection URL
 var url = 'mongodb://localhost:27017/play';
 // Use connect method to connect to the Server
@@ -23,7 +24,7 @@ app.get('/users', function (req, res) {
   console.log('get', req.query);
 
   var collection = mongoLikeForRealz.collection('users');
-  // Find some documents
+  
   collection.find({}).toArray(function(err, docs) {
     res.send(docs);
   });
@@ -41,7 +42,7 @@ app.post('/users', function (req, res) {
   });
 });
 
-
+ 
 var server = app.listen(3000, function () {
 
   var host = server.address().address;

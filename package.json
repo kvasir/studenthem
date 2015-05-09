@@ -16,5 +16,9 @@
     "body-parser": "^1.12.3",
     "express": "^4.12.3",
     "mongodb": "^2.0.30"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-live-server": "0.0.14"
   }
 }
