@@ -19,6 +19,7 @@
     "mongodb": "^2.0.30"
   },
   "devDependencies": {
+    "bower": "^1.4.1",
     "gulp": "^3.8.11",
     "gulp-live-server": "0.0.14"
   }
