@@ -4,6 +4,7 @@
   "description": "fun fun",
   "main": "app.js",
   "scripts": {
+    "postinstall": "bower install",
     "test": "gulp test",
     "start": "node ./app.js"
   },
