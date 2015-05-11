@@ -5,6 +5,9 @@ var app = express();
 var mongoLikeForRealz;
 
 
+app.use(require('connect-livereload')({
+    port: 35729
+  }));
 // Connection URL
 var url = 'mongodb://localhost:27017/play';
 // Use connect method to connect to the Server
@@ -12,9 +15,9 @@ MongoClient.connect(url, function(err, db) {
   console.log('Connected correctly to server');
 
   mongoLikeForRealz = db;
-  //db.close();
-});
-
+  //db.close();  
+}); 
+ 
 
 app.use(express.static('public'));
 app.use(bodyParser.json()); // for parsing application/json
@@ -49,5 +52,6 @@ var server = app.listen(3000, function () {
   var port = server.address().port;
 
   console.log('Example app listening at http://%s:%s', host, port);
-
+ 
 });
+
