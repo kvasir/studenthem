@@ -5,12 +5,13 @@
 	</head>
 	<body ng-app="myApp">
 		<div class="container" ng-controller="mainCtrl as vm">
-			
+			 		  
 			<h1>{{vm.header}}</h1>
-			<input name="name" ng-model="userName" placeholder="Name, now." />
-			<button type="button" ng-click="vm.addUser(userName)">CLICK!!!</button>
+			<input name="name" ng-model="vm.userName" placeholder="Name, now." />
+			<button type="button" ng-click="vm.addUser(vm.userName)">CLICK!!!</button>
 			<p ng-repeat="user in vm.users"> {{user.name}}</p>
 		</div>
+		   
 		<script src="lib/angular/angular.min.js"></script>
 		<script src="mainCtrl.js"></script>
 	</body>
