@@ -9,3 +9,5 @@ gulp.task('serve', function () {
     gulp.watch(['public/*.html','public/*.js'], server.notify);
     gulp.watch(['app.js'], server.start); 
 });
+
+gulp.task('default', ['serve']);
