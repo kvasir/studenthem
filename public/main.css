@@ -1,23 +1,23 @@
 html,
 body,
 .main-content {
-    height: 100%;
-    width: 100%;
-    margin: 0;
+	height: 100%;
+	width: 100%;
+	margin: 0;
 }
 
 .main-content {
-    position: relative;
+	position: relative;
 }
 
 .angular-google-map-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
 }
 
 .search-box-input {
-  width: 20em;
+	width: 20em;
 }
