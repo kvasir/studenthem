@@ -44,13 +44,16 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 	locationService.locations().then(function(locations){
 		vm.nationer = locations.nationer;
 		vm.nightclubs = locations.nightclubs;
-	});
+	}); 
 	
 	vm.map = {
 		center: uppsala,
 		zoom: startZoom
 	};
-
+	
+	vm.showInformation = function(data){
+		console.log(data);
+	};
 
 	var events = {
 		places_changed: function (searchBox) {
