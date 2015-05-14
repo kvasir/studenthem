@@ -12,26 +12,48 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 	$templateCache.put('searchbox.tpl.html', '<input class="search-box-input form-control" type="text" placeholder="Search">');
 }])
 
-.controller('mainCtrl', function ($http, uiGmapGoogleMapApi) {
+.factory('locationService', function($http){
+	var locationCall = $http.get('/data/locations.json');
+    var locations;
+
+    locationCall.success(function (data) {
+        locations = data;
+    });
+	
+	
+	return {
+		locations : function(){
+			return locationCall.then(function(){
+				return locations;
+			});
+		}
+	}
+})
+
+
+.controller('mainCtrl', function ($http, uiGmapGoogleMapApi, locationService) {
+	
 	var vm = this;
 	var startZoom = 13;
 	var searchZoom = 17;
-
 	var uppsala = { latitude: 59.853631, longitude: 17.646774 };
-
+	
+	vm.nationer = [];
+	vm.nightclubs = [];
+	
+	locationService.locations().then(function(locations){
+		vm.nationer = locations.nationer;
+		vm.nightclubs = locations.nightclubs;
+	}); 
+	
 	vm.map = {
 		center: uppsala,
 		zoom: startZoom
 	};
-
-	vm.randomMarkers = [
-		{ id: 0, latitude: 59.8551874, longitude: 17.6381544 }, // Östgöta nation
-		{ id: 1, latitude: 59.8533151, longitude: 17.6150677 }, // Studentvägen 32
-		{ id: 2, latitude: 59.8548056, longitude: 17.6141013 }, // Studentvägen 4
-		{ id: 3, latitude: 59.8499456, longitude: 17.5885325 }, // Sernanders väg 4
-		{ id: 4, latitude: 59.862212,  longitude: 17.632527  }, // KLUBB ORANGE UPPSALA
-		{ id: 5, latitude: 59.85887,   longitude: 17.630212  } // Södermanlands-Nerikes nation
-	];
+	
+	vm.showInformation = function(data){
+		console.log(data);
+	};
 
 	var events = {
 		places_changed: function (searchBox) {
