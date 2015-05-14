@@ -12,14 +12,17 @@
 
 			<ui-gmap-google-map center="vm.map.center" zoom="vm.map.zoom">
 				    <ui-gmap-search-box template="vm.searchbox.template" events="vm.searchbox.events" options="vm.options"></ui-gmap-search-box>
-						<ui-gmap-markers models="vm.randomMarkers" coords="'self'">
+						<ui-gmap-markers models="vm.nationer" coords="'self'">
+						<ui-gmap-markers models="vm.nightclubs" coords="'self'">
 			</ui-gmap-google-map>
 		</div>
 
 		<script src="lib/angular/angular.min.js"></script>
 		<script src="lib/lodash/dist/lodash.min.js"></script>
 		<script src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
-
+		
+		
+		<script src="locations.js"></script>
 		<script src="mainCtrl.js"></script>
 	</body>
 </html>
