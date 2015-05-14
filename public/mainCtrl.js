@@ -55,9 +55,13 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 				zoom: 18
 			};
 
+			// Temporary. We don't want a new marker on every search. We want the places to come from somewhere.
 			vm.marker = {
 				id: 0,
-				coords: newCenter
+				coords: {
+					latitude: places[0].geometry.location.lat(),
+					longitude: places[0].geometry.location.lng()
+				}
 			};
 		}
 	};
