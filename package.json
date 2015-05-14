@@ -11,6 +11,11 @@
     "fun"
   ],
   "author": "Kvasir",
+  "contributors": [
+    "John-Philip Johansson <seriema@gmail.com> (http://johansson.jp/)",
+    "Martin Sandström <maartiin_91@hotmail.com > (http://martinsandstrom.github.io/)",
+    "Michael Strömberg Razmgah <michael@razmgah.se> (http://michael.razmgah.se/)"
+  ],
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.12.3",
