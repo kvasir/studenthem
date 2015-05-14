@@ -17,6 +17,12 @@
     "Martin Sandström <maartiin_91@hotmail.com > (http://martinsandstrom.github.io/)",
     "Michael Strömberg Razmgah <michael@razmgah.se> (http://michael.razmgah.se/)"
   ],
+  "repository" : {
+    "type": "git",
+    "url": "https://github.com/kvasir/studenthem.git"
+  },
+  "bugs": "https://github.com/kvasir/studenthem/issues",
+  "homepage": "https://github.com/kvasir/studenthem/",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.12.3",
