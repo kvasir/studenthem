@@ -9,7 +9,7 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 })
 
 .run(['$templateCache', function ($templateCache) {
-	$templateCache.put('searchbox.tpl.html', '<input id="pac-input" class="pac-controls" type="text" placeholder="Search">');
+	$templateCache.put('searchbox.tpl.html', '<input class="search-box-input" type="text" placeholder="Search">');
 }])
 
 .controller('mainCtrl', function ($http, uiGmapGoogleMapApi) {
