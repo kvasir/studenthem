@@ -7,12 +7,6 @@
 			"longitude": 17.6381544
 		},
 		{
-			"id": 1,
-			"name": "Östgöta Nation",	 
-			"latitude": 59.8551874, 
-			"longitude": 17.6381544
-		},
-		{
 			"id": 2,
 			"name": "Södermanlands-Nerikes nation",	
 			"latitude": 59.85887,   
@@ -22,15 +16,23 @@
 	"nightclubs" : [
 		{
 			"id": 1,
-			"name": "Klubb Orange",	 
-			"latitude": 59.862212, 
-			"longitude": 17.5885325
+			"name": "Birger Jarl",	 
+			"latitude": 59.854197, 
+			"longitude": 17.638051
 		},
 		{
 			"id": 2,
 			"name": "Mikes festlya",	 
 			"latitude": 59.8499456, 
 			"longitude": 17.6381544
+		},
+		{
+			"id": 3,
+			"name": "Saluhallen",	 
+			"latitude": 59.859149, 
+			"longitude": 17.633388
 		}
 	]
 }
+
+
