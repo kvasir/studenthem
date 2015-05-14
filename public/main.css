@@ -16,6 +16,14 @@ body,
 	bottom: 0;
 	right: 0;
 	left: 0;
+	z-index: 5;
+}
+
+.flying-content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
 }
 
 .search-box-input {
