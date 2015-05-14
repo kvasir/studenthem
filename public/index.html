@@ -2,17 +2,30 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="main.css">
 	</head>
 	<body ng-app="myApp">
-		<div class="container" ng-controller="mainCtrl as vm">
-			 		  
-			<h1>{{vm.header}}</h1>
-			<input name="name" ng-model="vm.userName" placeholder="Name, now." />
-			<button type="button" ng-click="vm.addUser(vm.userName)">CLICK!!!</button>
-			<p ng-repeat="user in vm.users"> {{user.name}}</p>
-		</div>
+		<div ng-controller="mainCtrl as vm" class="main-content">
+			
+		   <div class="container search-content">
+			   <div class="jumbotron">
+				   <div class="input-group col-md-6">
+					  <input class="form-control" name="name" ng-model="vm.userName" placeholder="Gatunamn, område." />	  
+				      <span class="input-group-btn">
+				        <button ng-click="vm.addUser(vm.userName)" class="btn btn-default" type="button">Sök</button>
+					  </span>
+				   </div>
+			   </div>
+		   </div>
 		   
+  	   		<ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom'></ui-gmap-google-map>
+		</div>
+		
+		<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>	
 		<script src="lib/angular/angular.min.js"></script>
+		<script src="lib/lodash/dist/lodash.min.js"></script>
+		<script src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
+			
 		<script src="mainCtrl.js"></script>
 	</body>
 </html>

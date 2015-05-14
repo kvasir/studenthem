@@ -1,8 +1,10 @@
-
-angular.module('myApp', []).controller('mainCtrl', function ($http) {
+angular.module('myApp', ['uiGmapgoogle-maps'])
+.controller('mainCtrl', function ($http) {
 	var vm = this;
-
-	vm.header = "Välkommen till STUDENTHEM!!!";
+	
+	
+	vm.map = { center: { latitude: 59.853631, longitude: 17.646774 }, zoom: 11 };
+	
 	vm.addUser = function (userName) {
 
 		if (!userName) return false;
