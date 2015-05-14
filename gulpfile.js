@@ -12,9 +12,11 @@ gulp.task('serve', function () {
     gulp.watch('public/components/**/*.less', ['less']);
 });
 
-gulp.task('default', ['serve']);gulp.task('less', function() {
+gulp.task('less', function() {
     gulp.src('public/components/app.less')
         .pipe(less())
         .on('error', function(err){ console.log(err.message); })
         .pipe(gulp.dest('public/'));
 });
+
+gulp.task('default', ['serve', 'less']);
