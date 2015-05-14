@@ -16,22 +16,13 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 	var vm = this;
 	var uppsala = { latitude: 59.853631, longitude: 17.646774 };
 
-	vm.map = { center: uppsala, zoom: 11 };
+	vm.map = {
+		center: uppsala,
+		zoom: 11
+	};
 
 	vm.marker = {
-		id: 0,
-		coords: uppsala,
-		options: { draggable: true },
-		events: {
-			dragend: function (marker, eventName, args) {
-				vm.marker.options = {
-					draggable: true,
-					labelContent: 'lat: ' + vm.marker.coords.latitude + ' ' + 'lon: ' + vm.marker.coords.longitude,
-					labelAnchor: '100 0',
-					labelClass: 'marker-labels'
-				};
-			}
-		}
+		id: 0
 	};
 
 	var events = {
