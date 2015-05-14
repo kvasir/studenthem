@@ -1,0 +1,27 @@
+html,
+body,
+.main-content {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+.main-content {
+  position: relative;
+}
+.angular-google-map-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+}
+.flying-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+.search-box-input {
+  width: 20em;
+}
