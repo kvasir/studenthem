@@ -2,7 +2,7 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 
 .config(function (uiGmapGoogleMapApiProvider) {
 	uiGmapGoogleMapApiProvider.configure({
-		//    key: 'your api key',
+		//		key: 'your api key',
 		v: '3.17',
 		libraries: 'places' // Required for SearchBox.
 	});
@@ -26,16 +26,16 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 	var events = {
 		places_changed: function (searchBox) { }
 	};
-	
+
 	vm.options = {};
-	
+
 	uiGmapGoogleMapApi.then(function(maps) {
 		
 		var defaultBounds = new maps.LatLngBounds(
-  			new maps.LatLng(59.853631, 17.64677),
-  			new maps.LatLng(59.853631, 17.64677)
+				new maps.LatLng(59.853631, 17.64677),
+				new maps.LatLng(59.853631, 17.64677)
 		);
-		
+
 		vm.options.bounds = defaultBounds;
     });
 	
