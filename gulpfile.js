@@ -11,4 +11,9 @@ gulp.task('serve', function () {
     gulp.watch(['app.js'], server.start); 
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['serve']);gulp.task('less', function() {
+    gulp.src('public/components/app.less')
+        .pipe(less())
+        .on('error', function(err){ console.log(err.message); })
+        .pipe(gulp.dest('public/'));
+});
