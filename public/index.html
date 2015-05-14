@@ -6,8 +6,8 @@
 	</head>
 	<body>
 		<div ng-controller="mainCtrl as vm" class="main-content">
-			<ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom'>
-				    <ui-gmap-search-box template="vm.searchbox.template" events="vm.searchbox.events"></ui-gmap-search-box>
+			<ui-gmap-google-map center="vm.map.center" zoom="vm.map.zoom">
+				    <ui-gmap-search-box template="vm.searchbox.template" events="vm.searchbox.events" options="vm.options"></ui-gmap-search-box>
 			</ui-gmap-google-map>
 		</div>
 		
