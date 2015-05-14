@@ -14,11 +14,14 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 
 .controller('mainCtrl', function ($http, uiGmapGoogleMapApi) {
 	var vm = this;
+	var startZoom = 13;
+	var searchZoom = 17;
+
 	var uppsala = { latitude: 59.853631, longitude: 17.646774 };
 
 	vm.map = {
 		center: uppsala,
-		zoom: 11
+		zoom: startZoom
 	};
 
 	vm.randomMarkers = [
@@ -46,7 +49,7 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 					latitude: places[0].geometry.location.lat(),
 					longitude: places[0].geometry.location.lng()
 				},
-				zoom: 18
+				zoom: searchZoom
 			};
 		}
 	};
