@@ -9,6 +9,7 @@ gulp.task('serve', function () {
     
     gulp.watch(['public/*.html','public/*.js', 'public/*.css'], server.notify);
     gulp.watch(['app.js'], server.start); 
+    gulp.watch('public/components/**/*.less', ['less']);
 });
 
 gulp.task('default', ['serve']);gulp.task('less', function() {
