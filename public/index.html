@@ -1,27 +1,16 @@
 <!doctype html>
-<html>
+<html ng-app="myApp">
 	<head>
 		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" href="main.css">
 	</head>
-	<body ng-app="myApp">
+	<body>
 		<div ng-controller="mainCtrl as vm" class="main-content">
-			
-		   <div class="container search-content">
-			   <div class="jumbotron">
-				   <div class="input-group col-md-6">
-					  <input class="form-control" name="name" ng-model="vm.userName" placeholder="Gatunamn, område." />	  
-				      <span class="input-group-btn">
-				        <button ng-click="vm.addUser(vm.userName)" class="btn btn-default" type="button">Sök</button>
-					  </span>
-				   </div>
-			   </div>
-		   </div>
-		   
-  	   		<ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom'></ui-gmap-google-map>
+			<ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom'>
+				    <ui-gmap-search-box template="vm.searchbox.template" events="vm.searchbox.events"></ui-gmap-search-box>
+			</ui-gmap-google-map>
 		</div>
 		
-		<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>	
 		<script src="lib/angular/angular.min.js"></script>
 		<script src="lib/lodash/dist/lodash.min.js"></script>
 		<script src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
