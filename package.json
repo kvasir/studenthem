@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "fun fun",
   "main": "app.js",
+  "private": true,
   "scripts": {
     "postinstall": "bower install",
     "start": "gulp"
