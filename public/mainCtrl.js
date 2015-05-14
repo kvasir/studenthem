@@ -52,7 +52,7 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 	};
 	
 	vm.showInformation = function(data){
-		console.log(data);
+		console.log(data.model);
 	};
 
 	var events = {
