@@ -44,6 +44,10 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 	locationService.locations().then(function(locations){
 		vm.nationer = locations.nationer;
 		vm.nightclubs = locations.nightclubs;
+		
+		for(var i = 0; i < vm.nationer.length; i++) {
+			vm.nationer[i].icon = 'images/beer-icon.png';	
+		};
 	}); 
 	
 	vm.map = {
