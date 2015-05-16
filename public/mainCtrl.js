@@ -57,6 +57,7 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 	
 	vm.showInformation = function(data){
 		console.log(data.model);
+		data.model.icon = 'images/beer-icon-visited.png';
 	};
 
 	var events = {
