@@ -9,7 +9,7 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 })
 
 .run(['$templateCache', function ($templateCache) {
-	$templateCache.put('searchbox.tpl.html', '<input class="search-box-input form-control" type="text" placeholder="Search">');
+	$templateCache.put('searchbox.tpl.html', '<input class="search-box-input form-control" type="text" placeholder="Sök på område, gatunamn">');
 }])
 
 .factory('locationService', function($http){
