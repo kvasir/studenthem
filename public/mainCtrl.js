@@ -13,7 +13,7 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 }])
 
 .factory('locationService', function($http){
-	var locationCall = $http.get('/data/locations.json');
+	var locationCall = $http.get('data/locations.json');
     var locations;
 
     locationCall.success(function (data) {

@@ -2,7 +2,8 @@
 var gulp = require('gulp');
 var gls = require('gulp-live-server');
 var less = require('gulp-less');
- 
+var ghPages = require('gulp-gh-pages');
+
 gulp.task('serve', function () {
     var server = gls.new('app.js');
     server.start();
@@ -17,6 +18,11 @@ gulp.task('less', function() {
         .pipe(less())
         .on('error', function(err){ console.log(err.message); })
         .pipe(gulp.dest('public/'));
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./public/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('default', ['serve', 'less']);
