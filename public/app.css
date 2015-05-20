@@ -21,6 +21,7 @@ body {
   right: 0;
   top: 0;
   height: 80px;
+  border-bottom: 1px solid #dedede;
 }
 .cmp-header .logo {
   padding: 20px;
