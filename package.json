@@ -16,7 +16,7 @@
     "Martin Sandström <maartiin_91@hotmail.com > (http://martinsandstrom.github.io/)",
     "Michael Strömberg Razmgah <michael@razmgah.se> (http://michael.razmgah.se/)"
   ],
-  "repository" : {
+  "repository": {
     "type": "git",
     "url": "https://github.com/kvasir/studenthem.git"
   },

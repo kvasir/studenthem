@@ -19,8 +19,8 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
     locationCall.success(function (data) {
         locations = data;
     });
-	
-	
+
+
 	return {
 		locations : function(){
 			return locationCall.then(function(){
@@ -32,29 +32,29 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 
 
 .controller('mainCtrl', function ($http, uiGmapGoogleMapApi, locationService) {
-	
+
 	var vm = this;
 	var startZoom = 13;
 	var searchZoom = 17;
 	var uppsala = { latitude: 59.853631, longitude: 17.646774 };
-	
+
 	vm.nationer = [];
 	vm.nightclubs = [];
-	
+
 	locationService.locations().then(function(locations){
 		vm.nationer = locations.nationer;
 		vm.nightclubs = locations.nightclubs;
-		
+
 		for(var i = 0; i < vm.nationer.length; i++) {
-			vm.nationer[i].icon = 'images/beer-icon.png';	
+			vm.nationer[i].icon = 'images/beer-icon.png';
 		};
-	}); 
-	
+	});
+
 	vm.map = {
 		center: uppsala,
 		zoom: startZoom
 	};
-	
+
 	vm.showInformation = function(data){
 		console.log(data.model);
 		data.model.icon = 'images/beer-icon-visited.png';

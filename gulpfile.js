@@ -1,4 +1,3 @@
-
 var gulp = require('gulp');
 var gls = require('gulp-live-server');
 var less = require('gulp-less');
@@ -7,9 +6,9 @@ var ghPages = require('gulp-gh-pages');
 gulp.task('serve', function () {
     var server = gls.new('app.js');
     server.start();
-    
+
     gulp.watch(['public/*.html','public/*.js', 'public/*.css'], server.notify);
-    gulp.watch(['app.js'], server.start); 
+    gulp.watch(['app.js'], server.start);
     gulp.watch('public/components/**/*.less', ['less']);
 });
 

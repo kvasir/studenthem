@@ -15,9 +15,9 @@ MongoClient.connect(url, function(err, db) {
   console.log('Connected correctly to server');
 
   mongoLikeForRealz = db;
-  //db.close();  
-}); 
- 
+  //db.close();
+});
+
 
 app.use(express.static('public'));
 app.use(bodyParser.json()); // for parsing application/json
@@ -27,7 +27,7 @@ app.get('/users', function (req, res) {
   console.log('get', req.query);
 
   var collection = mongoLikeForRealz.collection('users');
-  
+
   collection.find({}).toArray(function(err, docs) {
     res.send(docs);
   });
@@ -45,13 +45,12 @@ app.post('/users', function (req, res) {
   });
 });
 
- 
+
 var server = app.listen(3000, function () {
 
   var host = server.address().address;
   var port = server.address().port;
 
   console.log('Example app listening at http://%s:%s', host, port);
- 
-});
 
+});
