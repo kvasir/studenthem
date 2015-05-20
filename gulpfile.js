@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var gls = require('gulp-live-server');
 var less = require('gulp-less');
 var ghPages = require('gulp-gh-pages');
+var openIt = require('gulp-open');
 
 gulp.task('serve', function () {
     var server = gls.new('app.js');
@@ -10,6 +11,13 @@ gulp.task('serve', function () {
     gulp.watch(['public/*.html','public/*.js', 'public/*.css'], server.notify);
     gulp.watch(['app.js'], server.start);
     gulp.watch('public/components/**/*.less', ['less']);
+
+    var options = {
+        url: 'http://localhost:3000',
+    };
+
+    gulp.src('public/index.html')
+    .pipe(openIt('', options));
 });
 
 gulp.task('less', function() {
