@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<div ng-controller="mainCtrl as vm" class="main-content">
-			<div class="cmp-header">
+			<div id="navbar" class="cmp-header">
 				<img class="logo" src="images/logo.png" alt="Studenthem Logo" />
 				<div class="nav">
 					<ul>
@@ -17,7 +17,7 @@
 			</div>
 
 			<ui-gmap-google-map center="vm.map.center" zoom="vm.map.zoom">
-				    <ui-gmap-search-box template="vm.searchbox.template" events="vm.searchbox.events" options="vm.options"></ui-gmap-search-box>
+				    <ui-gmap-search-box parentdiv="'navbar'" template="vm.searchbox.template" events="vm.searchbox.events" options="vm.options"></ui-gmap-search-box>
 					<ui-gmap-markers models="vm.nightclubs" click="vm.showInformation" coords="'self'">
 					<ui-gmap-markers models="vm.nationer" click="vm.showInformation" coords="'self'" icon="'icon'">
 			</ui-gmap-google-map>
@@ -26,8 +26,8 @@
 		<script src="lib/angular/angular.min.js"></script>
 		<script src="lib/lodash/dist/lodash.min.js"></script>
 		<script src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
-		
-		
+
+
 		<script src="mainCtrl.js"></script>
 	</body>
 </html>
