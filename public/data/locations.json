@@ -2,37 +2,38 @@
 	"nationer" : [
 		{
 			"id": 0,
-			"name": "Östgöta Nation",	 
-			"latitude": 59.8551874, 
+			"name": "Östgöta Nation",
+			"latitude": 59.8551874,
 			"longitude": 17.6381544
 		},
 		{
 			"id": 2,
-			"name": "Södermanlands-Nerikes nation",	
-			"latitude": 59.85887,   
+			"name": "Södermanlands-Nerikes nation",
+			"latitude": 59.85887,
 			"longitude": 17.63021
 		}
 	],
 	"nightclubs" : [
 		{
 			"id": 1,
-			"name": "Birger Jarl",	 
-			"latitude": 59.854197, 
-			"longitude": 17.638051
+			"name": "Birger Jarl",
+			"latitude": 59.854197,
+			"longitude": 17.638051,
+			"type": "nightclub"
 		},
 		{
 			"id": 2,
-			"name": "Mikes festlya",	 
-			"latitude": 59.8499456, 
-			"longitude": 17.6381544
+			"name": "Mikes festlya",
+			"latitude": 59.8499456,
+			"longitude": 17.6381544,
+			"type": "nightclub"
 		},
 		{
 			"id": 3,
-			"name": "Saluhallen",	 
-			"latitude": 59.859149, 
-			"longitude": 17.633388
+			"name": "Saluhallen",
+			"latitude": 59.859149,
+			"longitude": 17.633388,
+			"type": "nightclub"
 		}
 	]
 }
-
-
