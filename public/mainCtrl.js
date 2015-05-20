@@ -48,6 +48,10 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 		for(var i = 0; i < vm.nationer.length; i++) {
 			vm.nationer[i].icon = 'images/beer-icon.png';
 		};
+
+		for(var i = 0; i < vm.nightclubs.length; i++) {
+			vm.nightclubs[i].icon = 'images/home-icon.png';
+		};
 	});
 
 	vm.map = {
