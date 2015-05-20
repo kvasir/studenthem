@@ -61,7 +61,11 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 
 	vm.showInformation = function(data){
 		console.log(data.model);
-		data.model.icon = 'images/beer-icon-visited.png';
+		if(data.model.type === "nightclub") {
+			data.model.icon = 'images/home-icon-visited.png';
+		} else {
+			data.model.icon = 'images/beer-icon-visited.png';
+		}
 	};
 
 	var events = {
