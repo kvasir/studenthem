@@ -9,7 +9,7 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 })
 
 .run(['$templateCache', function ($templateCache) {
-	$templateCache.put('searchbox.tpl.html', '<input class="search-box-input form-control" type="text" placeholder="Search">');
+	$templateCache.put('searchbox.tpl.html', '<input class="search-box-input form-control" type="text" placeholder="Sök på område, gatunamn">');
 }])
 
 .factory('locationService', function($http){
@@ -48,6 +48,10 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 		for(var i = 0; i < vm.nationer.length; i++) {
 			vm.nationer[i].icon = 'images/beer-icon.png';
 		};
+
+		for(var i = 0; i < vm.nightclubs.length; i++) {
+			vm.nightclubs[i].icon = 'images/home-icon.png';
+		};
 	});
 
 	vm.map = {
@@ -57,7 +61,11 @@ angular.module('myApp', ['uiGmapgoogle-maps'])
 
 	vm.showInformation = function(data){
 		console.log(data.model);
-		data.model.icon = 'images/beer-icon-visited.png';
+		if(data.model.type === "nightclub") {
+			data.model.icon = 'images/home-icon-visited.png';
+		} else {
+			data.model.icon = 'images/beer-icon-visited.png';
+		}
 	};
 
 	var events = {

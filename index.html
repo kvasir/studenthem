@@ -6,13 +6,24 @@
 	</head>
 	<body>
 		<div ng-controller="mainCtrl as vm" class="main-content">
-			<div class="alert alert-info flying-content">
-				<h1>Välkommen till ditt nya StudentHem!</h1>
+			<div class="cmp-header">
+				<a href="index.html">
+					<img class="logo" src="images/logo.png" alt="Studenthem Logo" />
+				</a>
+				<div class="nav">
+					<ul>
+						<li><a href="#">Nytt konto</a></li>
+						<li><a href="#">Logga in</a></li>
+					</ul>
+				</div>
+				<div id="search-area" class="search-area">
+
+				</div>
 			</div>
 
 			<ui-gmap-google-map center="vm.map.center" zoom="vm.map.zoom">
-				    <ui-gmap-search-box template="vm.searchbox.template" events="vm.searchbox.events" options="vm.options"></ui-gmap-search-box>
-					<ui-gmap-markers models="vm.nightclubs" click="vm.showInformation" coords="'self'">
+				    <ui-gmap-search-box parentdiv="'search-area'" template="vm.searchbox.template" events="vm.searchbox.events" options="vm.options"></ui-gmap-search-box>
+					<ui-gmap-markers models="vm.nightclubs" click="vm.showInformation" coords="'self'" icon="'icon'">
 					<ui-gmap-markers models="vm.nationer" click="vm.showInformation" coords="'self'" icon="'icon'">
 			</ui-gmap-google-map>
 		</div>
@@ -20,8 +31,8 @@
 		<script src="lib/angular/angular.min.js"></script>
 		<script src="lib/lodash/dist/lodash.min.js"></script>
 		<script src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
-		
-		
+
+
 		<script src="mainCtrl.js"></script>
 	</body>
 </html>
